@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import NavBar from "./AppearingNavBarSim/NavBar/Navbar";
+import NavBar from "./Components/AppearingNavBarSim/NavBar/Navbar";
 import UserLopFix from "./Learning/UserLoping/UserLopFix";
 import UserLopBug from "./Learning/UserLoping/UserLopBug";
 
