@@ -8,3 +8,13 @@ It is my hope that I will use this place to improve my skills and maybe even out
 
 1. Every addition or test must be an independent file or a group of files that can be removed and used in another project.
 2. Every addition or test must have a read me file to explain it witch has 'How to use', 'What it's for' and a date.
+
+### Examples list:
+
+#### Components:
+
+1. AppearingNavBarSim: Navigation bar with a disappearing animation.
+
+#### Css Tricks and Elements:
+
+1. Parallax Scrolling: 3D scrolling effect.

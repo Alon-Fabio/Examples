@@ -1,16 +1,14 @@
 @import "../sass/variables.scss";
 
 nav {
-  z-index: 999;
-  top: 0;
+  position: absolute; /* This is not absolute because of the Parallax element that has a overflowY of hidden. */
+  inset: 0 0 auto 0;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  background-color: $base-color;
+  z-index: 999;
   padding: 10px;
+  background-color: $base-color;
   transition: padding 0.5s ease, background-color 0.5s ease;
-
   img {
     z-index: 999;
     height: 40px;
