@@ -102,12 +102,6 @@ const Navbar: React.FC<{ onRouteChange: Function }> = ({ onRouteChange }) => {
           >
             About
           </li>
-          <li
-            onClick={() => {
-              onBurgerClick();
-              onRouteChange("About");
-            }}
-          ></li>
         </ul>
       </div>
       <Burger burgerStyle={burgerStyle} burgerClick={onBurgerClick} />

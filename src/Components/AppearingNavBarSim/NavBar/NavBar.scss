@@ -2,7 +2,7 @@
 
 nav {
   position: absolute; /* This is not absolute because of the Parallax element that has a overflowY of hidden. */
-  inset: 0 0 auto 0;
+  inset: 0 15px auto 0;
   display: flex;
   justify-content: space-between;
   z-index: 999;
@@ -43,12 +43,10 @@ nav {
 @media screen and (max-width: 768px) {
   .navLinks {
     // For bigger menus subtract from the top
-    top: -200px;
-    width: 100%;
+    inset: -200px 0 auto 0;
     padding: 10px;
     background-color: $base-color;
     position: absolute;
-    left: 0;
     display: flex;
     flex-direction: column-reverse;
     transition: top 0.5s ease-out;
@@ -58,7 +56,7 @@ nav {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: calc(100vw - 15px);
     height: 64px;
     background-color: $base-color;
   }

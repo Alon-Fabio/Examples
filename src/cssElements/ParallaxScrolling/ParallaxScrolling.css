@@ -10,32 +10,31 @@
 
 .ParallaxContainer {
   position: relative;
-  display: flex;
-  height: 100vh;
+  z-index: -1;
   /* Not Relevant for the effect */
   margin: 0 auto;
-  max-height: 100vh;
-  width: 50vw;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
 }
+
 .perspective3d {
-  transform-style: preserve-3d; /* Enables the 3D perspective no the children of this container*/
+  pointer-events: none; /* Lets you click trough the element. */
+  transform-style: preserve-3d; /* Enables the 3D perspective no the children of this container. */
 }
 
 .mainBG {
-  transform: translateZ(
-    -200x
-  ); /* This makes the effect of perspective, and we need to add the scale to reenlarge the object (10px of 10px base perspective is half the size, so we doubled th scale)*/
-  background-color: aqua;
-  height: 50vh;
-  width: 100%;
+  transform: translateZ(-500px) scale(2);
+  background-image: linear-gradient(purple, red, blue);
+  height: 100%;
 }
 
 .main2 {
-  transform: translateZ(100px) scale(0.9); /* This makes the effect of perspective, and we need to add the scale to reenlarge the object (10px of 10px base perspective is half the size, so we doubled th scale)*/
+  transform: translateZ(-400px) scale(1.6);
 }
 
 .mainFG {
-  transform: translateZ(300px);
+  transform: translateZ(-200px) scale(1.8);
 }
 
 .mainBG,
@@ -96,11 +95,23 @@
 }
 
 /* Not Relevant for the effect */
-.exampleCon {
+.PSBoxCon {
   position: relative;
-
-  max-height: 50vh;
-  margin: 5rem auto;
+  height: 1000px;
   padding: 3rem;
   background-color: #333;
+}
+
+.PSBGCon {
+  border: 30px solid #333;
+}
+
+@media screen and (min-width: 790px) {
+  .main2 {
+    transform: translateZ(-400px) scale(0.6) translateY(20vw);
+  }
+
+  .mainFG {
+    transform: translateZ(-200px) scale(0.7) translateY(20vw);
+  }
 }
